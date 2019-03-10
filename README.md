@@ -10,7 +10,7 @@ Restify: https://github.com/restify/node-restify
 
 Restify(errors): https://github.com/restify/errors
 
-Knexjs: https://github.com/tgriesser/knex, http://knexjs.org
+Knexjs: https://github.com/tgriesser/knex /  http://knexjs.org
 
 ## Instalação e execução:
 
@@ -45,7 +45,7 @@ var knex = require('knex')({
 });
 ```
 
-## Instalção:
+## Instalação:
 
 ```
  1 cd Node-API-RESTful
