@@ -2,19 +2,21 @@
 
 Os seguintes módulos e ferramentas foram utilizados para o desenvolvimento da aplicação:
 
-Cliente de acesso ao servidor: https://www.getpostman.com/
+Postman: https://www.getpostman.com/
 
-Módulo para manter o servidor funcionando: https://github.com/remy/nodemon
+Nodemon: https://github.com/remy/nodemon
 
-Framework para rotas REST: https://github.com/restify/node-restify
+Restify: https://github.com/restify/node-restify
 
-Plugin para definir mensagens de erro: https://github.com/restify/errors
+Restify(errors): https://github.com/restify/errors
 
-Módulo ORM para Mysql: https://github.com/tgriesser/knex, http://knexjs.org
+Knexjs: https://github.com/tgriesser/knex, http://knexjs.org
 
-## Instalação e execução
+## Instalação e execução:
 
-Para testar a aplicação, você deve ter o MySQL instalado, com a estrutura de banco de dados e tabela já criados. Você pode executar o script a seguir para gerar esta estrutura!
+E necessário ter previamente instalado Node ˆ8.x e o MySQL 
+
+### Insira a estrutura utilizada no MySQL
 
 ```sql
 CREATE DATABASE `db`;
@@ -26,10 +28,10 @@ CREATE TABLE `rest` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `rest` VALUES(1, 'João Pessoa');
-INSERT INTO `rest` VALUES(2, 'Maria Joaquina');
+INSERT INTO `rest` VALUES(2, 'Pessoa joão');
 ```
 
-No arquivo index.js,  se encontra as configuração do MySQL.
+### Configure a conexãono arquivo index.js.
 
 ```javascript
 var knex = require('knex')({
@@ -42,15 +44,12 @@ var knex = require('knex')({
     }
 });
 ```
-Instalção:
 
-Acesse o terminal e execute o comando `npm i -g nodemon` para instalar o nodemon como global.
-
-Em seguida, dentro da pasta do projeto, execute
+## Instalção:
 
 ```
-npm install
+ 1 cd Node-API-RESTful
+ 2 npm install
+ 3 npm run dev
+ disponível: http://localhost:3000
 ```
-Após concluída a instalação, execute o comando `nodemon index.js`
-
-Acesso a API http://localhost:8080
